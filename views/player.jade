@@ -1,8 +1,8 @@
 extends layout
+include player_partial.jade
 
 block content
-  h1= title
-    div
-      h3 #{player.last_name}, #{player.first_name}
-      p #{player.date_started}
-      p #{player.jersey_number}, #{player.position}
+  .page-header
+    h1 #{player.first_name} #{player.last_name}    
+  .row
+    +player_template(player)

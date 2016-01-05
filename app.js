@@ -36,8 +36,10 @@ app.use(flash());
 app.use(authAPI.passport.initialize());
 app.use(authAPI.passport.session());
 
+app.locals.moment = require('moment');
+
 app.use('/', routes);
-app.use('/users', users);
+// app.use('/users', users);
 app.use('/players', players);
 
 // catch 404 and forward to error handler

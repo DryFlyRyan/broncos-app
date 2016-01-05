@@ -58,7 +58,7 @@ router.post('/login',
     res.redirect('/players')
 });
 
-router.get('/logout', funtion(req, res) {
+router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/auth/login');
 });
