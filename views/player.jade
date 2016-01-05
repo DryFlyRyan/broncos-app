@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+    div
+      h3 #{player.last_name}, #{player.first_name}
+      p #{player.date_started}
+      p #{player.jersey_number}, #{player.position}
