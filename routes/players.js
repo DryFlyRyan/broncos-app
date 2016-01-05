@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
 router.get('/:id', function(req, res) {
   Players().select().where('id', req.params.id).first().then(function(player) {
     res.render('player', {
-      title: player.first_name,
+      title: player.first_name + ' ' + player.last_name,
       player: player
     })
   })

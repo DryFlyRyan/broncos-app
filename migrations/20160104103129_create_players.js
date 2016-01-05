@@ -1,5 +1,10 @@
 
 exports.up = function(knex, Promise) {
+  return knex.schema.createTable('user', function(table) {
+    table.increments();
+    table.string('email').unique();
+    table.string('password');
+  })
   return knex.schema.createTable('player', function(table){
     table.increments();
     table.string('first_name');
